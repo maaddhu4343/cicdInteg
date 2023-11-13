@@ -6,7 +6,7 @@ pipeline {
     choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: 'Enter browser name')
   }
   options {
-    ansiColor('xterm'),
+    ansiColor('xterm')
     timeout(time: 10, unit: 'MINUTES')
   }
 
@@ -28,7 +28,7 @@ pipeline {
     }
     stage('Test') {
       steps {
-        sh 'npm i',
+        sh 'npm i'
         sh 'npm run cypress:run -- --spec $SPEC --browser $BROWSER'
       }
     }
@@ -41,7 +41,7 @@ pipeline {
 
   post {
     always { 
-        publishers { archiveArtifacts 'cypress/screenshots/**' },
+        publishers { archiveArtifacts 'cypress/screenshots/**' }
         publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/reports', reportFiles: 'index.html', reportName: 'HTML Cypress Report'])
     }
 
