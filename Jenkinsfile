@@ -11,16 +11,6 @@ pipeline {
   }
 
   stages {
-    stage('Preparation'){
-         try{
-            
-        // Clone Project from bitbucket
-        git url: 'https://github.com/maaddhu4343/cicdInteg.git'
-        
-        }catch(err){
-            echo err
-        }
-    }
     stage('Build') {
       steps {
         sh 'echo "Hello World"'
