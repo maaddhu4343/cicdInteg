@@ -6,7 +6,7 @@ pipeline {
     choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: 'Enter browser name')
   }
   options {
-    ansiColor('authorizationMatrix')
+    ansiColor(['authorizationMatrix'])
     
   }
 
