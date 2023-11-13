@@ -6,8 +6,8 @@ pipeline {
     choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: 'Enter browser name')
   }
   options {
-    ansiColor('authorizationMatrix')
-    timeout(time: 10, unit: 'MINUTES')
+    ansiColor([authorizationMatrix, buildDiscarder, catchError, checkoutToSubdirectory, disableConcurrentBuilds, disableRestartFromStage, disableResume, durabilityHint, githubProjectProperty, overrideIndexTriggers, parallelsAlwaysFailFast, preserveStashes, quietPeriod, rateLimitBuilds, retry, script, skipDefaultCheckout, skipStagesAfterUnstable, timeout, timestamps, waitUntil, warnError, withChecks, withContext, withCredentials, withEnv, wrap, ws])
+    
   }
 
   stages {
