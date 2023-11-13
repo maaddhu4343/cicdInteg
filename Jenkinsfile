@@ -5,11 +5,7 @@ pipeline {
     string(name: 'SPEC', defaultValue:'cypress/e2e/**', description: 'Enter script path that you want to run')
     choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: 'Enter browser name')
   }
-  options {
-    ansiColor(['authorizationMatrix'])
-    
-  }
-
+ 
   stages {
     stage('Build') {
       steps {
