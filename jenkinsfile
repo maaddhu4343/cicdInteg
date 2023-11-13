@@ -1,0 +1,15 @@
+pipeline {
+  agent any
+  
+  parameters {
+    string(name: 'SPEC', defaultValue:'cypress/e2e/**/**', description: 'Enter script path that you want to run')
+  }
+
+  stages {
+    stage('Build') {
+      steps {
+        sh 'echo "Hello World"'
+      }
+    }
+  }
+}
