@@ -27,7 +27,6 @@ pipeline {
 
   post {
     always { 
-        publishers { archiveArtifacts 'cypress/screenshots/**' }
         publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/reports', reportFiles: 'index.html', reportName: 'HTML Cypress Report'])
     }
 
