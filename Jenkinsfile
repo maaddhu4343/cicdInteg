@@ -13,7 +13,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'echo "Hello World"'
+        bat 'echo "Hello World"'
       }
     }
     stage('Test') {
@@ -24,7 +24,7 @@ pipeline {
     }
     stage('Deploy') {
       steps {
-        sh 'echo "Deplying......"'
+        bat 'echo "Deplying......"'
       }
     }
   }
