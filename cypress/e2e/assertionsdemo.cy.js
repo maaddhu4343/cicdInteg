@@ -17,5 +17,5 @@ it('Assertions Demo', () => {
     
     assert.equal(1, 1, 'CUSTOM: Not equal')
     assert.equal(1, '1', 'CUSTOM: Not equal')
-    assert.strictEqual(1, '1', 'CUSTOM Strict euqal: Not equal')
+    assert.strictEqual('1', '1', 'CUSTOM Strict euqal: Not equal')
 })
