@@ -6,6 +6,7 @@ module.exports = defineConfig({
     charts: true,
     reportPageTitle: 'custom-title',
     embeddedScreenshots: true,
+    reportDir: "cypress/reports",
     inlineAssets: true,
     saveAllAttempts: false,
   },
